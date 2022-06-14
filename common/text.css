@@ -1,0 +1,27 @@
+body{
+    font-family: 'Ariel'
+}
+
+p{margin: 5px;}
+h1{margin: 5px;}
+h2{margin: 5px;}
+h3{margin: 5px;}
+h4{
+    margin: 5px;
+}
+h5{margin: 5px;}
+ul{margin:0}
+
+.text-center{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body{font-size: 0.75em;}
+    h1{font-size: 1.5em;}
+    h2{font-size: 1.125em;}
+    h3{font-size: 1.5em;}
+    h4{font-size: 1em;}
+    h5{font-size: 0.62em;}
+  }

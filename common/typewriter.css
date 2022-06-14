@@ -1,0 +1,42 @@
+.typewriter {
+    --animation-steps: 17;
+    --animation-time: 3s;
+    color: white;
+    position: relative;
+    font-family: 'Courier New', monospace;
+    width: max-content;
+}
+
+.typewriter::before {
+    position: absolute;
+    right: 0;
+    content: "";
+    background-color: black;
+    width: calc(100% + 0.1ch);
+    height: 100%;
+    animation: typewriter var(--animation-time) 0.5s steps(var(--animation-steps)) forwards;
+}
+
+.typewriter::after {
+    position: absolute;
+    left: -0.1ch;
+    content: "";
+    background-color: black;
+    border-radius: 3px;
+    width: 0.5ch;
+    height: 100%;
+    animation: move var(--animation-time) 0.5s steps(var(--animation-steps)) forwards,blink calc(var(--animation-time) * 3 / var(--animation-steps)) 20 forwards;
+}
+@keyframes typewriter {
+    to  {width: 0;}
+}
+
+@keyframes move {
+    to  {left: calc(100% + 0.1ch);}
+}
+
+@keyframes blink {
+    0%  {background-color: #fff0;}
+    50%  {background-color: white;}
+    100%  {background-color: #fff0;}
+}

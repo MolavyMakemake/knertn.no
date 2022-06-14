@@ -1,0 +1,34 @@
+:root {
+    --mobile-scale: 600px;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 141.4vw;
+    max-width: 1000px;
+    max-height: 1414px;
+    min-height: 100vh;
+    background-color: gray;
+}
+
+.typearea{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+    height: 350vw;
+    }
+
+    .typearea{
+    grid-template-rows: repeat(20, 1fr);
+    }
+}
