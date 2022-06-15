@@ -23,12 +23,13 @@ body{
     grid-row-gap: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .container{
     height: 350vw;
     }
 
     .typearea{
     grid-template-rows: repeat(20, 1fr);
+    height: 97%;
     }
 }

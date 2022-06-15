@@ -4,12 +4,10 @@ body{
 }
 
 .typearea{
-    width: 85%;
-    height: 92%;
-
-    margin-top: 5%;
-    margin-left: 10%;
-
+    width: 94%;
+    height: 96%;
+    margin-top: 2%;
+    margin-left: 4%;
     background-color: rgb(207, 203, 203);
 }
 
@@ -44,16 +42,18 @@ body{
 }
 .frame{
     width: 32%;
-    height: 15vh;
+    height: 130px;
 }
 .img{
-    height: 17vh;
+    height: 14vw;
+    max-height: 180px;
     background-size: cover;
     background-position: center;
-    margin: 5px;
+    flex-shrink: 0;
 }
 .screen-wide{
-    width: 100%;
+    width: calc(100% - 10px);
+    margin: 5px;
 }
 
 .info-tab{
@@ -72,7 +72,7 @@ body{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .typearea{
         width: 94%;
         margin-top: 2%;
@@ -80,12 +80,12 @@ body{
     }
     
     .main-tab{
-        grid-area: 2/1/15/4;
+        grid-area: 2/1/16/4;
         background-color: #ff68fd42;
     }
 
     .info-tab{
-        grid-area: 15 / 1 / 21 / 5;
+        grid-area: 16 / 1 / 21 / 5;
         flex-direction: row;
         flex-wrap: wrap;
         padding-top: 2px;
@@ -96,5 +96,9 @@ body{
     }
     .languages{
         transform: translate(0, -130px);
+    }
+
+    .img{
+        height: 100px;
     }
 }
