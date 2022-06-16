@@ -9,6 +9,8 @@ body{
     flex-direction: row;
     justify-items: center;
     justify-content: center;
+    height: 14vh;
+    min-height: min(180px, 35vh);
 }
 #centered{
     z-index: 1;

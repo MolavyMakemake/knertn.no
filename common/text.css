@@ -1,5 +1,5 @@
 body{
-    font-family: 'Ariel'
+    font-family: 'Helvetica';
 }
 
 p{margin: 5px;}
@@ -15,6 +15,17 @@ ul{margin:0}
 .text-center{
     display: flex;
     align-items: center;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.text-indented{
+    text-indent: 10px;
+}
+.h_br{
+    height: 5px;
 }
 
 @media only screen and (max-width: 600px) {
