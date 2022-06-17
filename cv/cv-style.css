@@ -120,3 +120,57 @@ hr{
         height: 100px;
     }
 }
+
+
+
+.cv-header{
+    margin-top: 50px;
+}
+.link-container{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    max-height: 750px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link {
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #0099cc;
+    width: 15vmin;
+    height: 10vmin;
+    min-width: 75px;
+    min-height: 50px;
+    margin: 5vmin;
+    border: solid black 2px;
+    background-size: cover;
+    background-position: center;
+  }
+  .link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+      -webkit-transition: none;
+         -moz-transition: none;
+              transition: none;
+  }
+  .link:hover:after {
+    transform: scale(1.1);
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+    
+      -webkit-transition: all 0.4s ease-in-out;
+         -moz-transition: all 0.4s ease-in-out;
+              transition: all 0.4s ease-in-out;
+  }

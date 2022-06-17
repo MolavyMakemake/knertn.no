@@ -1,4 +1,4 @@
-const G = 5;
+const G = 3;
 let entities = [];
 let angleA = 100;
 let angleB = 25;
