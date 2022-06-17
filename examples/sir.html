@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="examples.css">
+    <link rel="stylesheet" href="sir.css">
+    <link rel="stylesheet" href="../common/text.css">
+
+    <script src="plotly.min.js"></script>
+
+    <title>Example</title>
+</head>
+<body>
+
+    <div class="con">
+        <div class="states">
+            <div class="state"><img src="susceptible.png">
+                <h1 class="text-center text-indented"  id="susceptible"></h1>
+            </div>
+    
+            <div class="state"><img class="small" src="infected.png">
+                <h1 class="text-center text-indented" id="infected"></h1>
+            </div>
+    
+            <div class="state"><img src="resistant.jpg">
+                <h1 class="text-center text-indented"  id="resistant"></h1>
+            </div>
+    
+            <div class="state"><img class="small" src="dead.png">
+                <h1 class="text-center text-indented" id="dead"></h1>
+            </div>
+        </div>
+        <div id="chart"></div>
+    </div>
+    
+
+    <div class="cover">
+        <div></div>
+    </div>
+
+    <script src="examples.js"></script>
+    <script src="sir.js"></script>
+    <script>Reset();</script>
+
+
+    <div class="reset" onclick="Reset()" style="visibility: hidden;"></div>
+
+</body>
+</html>

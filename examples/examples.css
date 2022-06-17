@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    cursor: pointer;
+}
+.con{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.graphics{
+    z-index: 2;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+.cover > div{
+    background-image: url("../common/interactive.png");
+    max-width: 30vw;
+    width: 150px;
+    height: 150px;
+    max-height: 30vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+polyline{
+    fill: none;
+    stroke: black;
+}
+
+.reset{
+    width: 150px;
+    height: 150px;
+    max-width: 20vw;
+    max-height: 20vw;
+    position: absolute;
+    right: 5vw;
+    bottom: 5vw;
+    cursor: pointer;
+    background-image: url("../common/reset.png");
+    background-position-y: center;
+    background-size: cover;
+    z-index: 1;
+}
