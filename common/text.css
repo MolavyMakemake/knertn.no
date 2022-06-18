@@ -22,7 +22,7 @@ ul{margin:0}
 }
 
 .text-indented{
-    text-indent: 10px;
+    margin-left: 10px;
 }
 .h_br{
     height: 5px;
