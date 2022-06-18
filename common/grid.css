@@ -26,7 +26,7 @@ body{
 
 @media only screen and (max-width: 700px) {
     .container{
-    min-height: 1700px;
+    min-height: 1750px;
     }
 
     .typearea{
