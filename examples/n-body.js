@@ -8,20 +8,20 @@ let solar_mass = 100;
 
 const startValues = 
 [
-    [1.5, -40, 40,  0.6, 1],
-    [1, 0, -40, -2, -1],
-    [2.5, 45, 0,  0, 2.5]
+    [1.5, -40,  40,  0.6,   1, "#c1440e"],
+    [1  ,   0, -40,   -2,  -1, "#f0e7e7"],
+    [2.5,  45,   0,    0, 2.5, "#e77d11"]
 ]
 
 function Reset(){
     let n = startValues.length;
     entities = Array(n);
     id = 0;
-    let con = "<circle cx='50vw' cy='50vh' r='3vmin' fill='yellow' />";
+    let con = "";
     for (let i = 0; i < n; i++){
         let s = startValues[i];
         entities[i] = new Entity(s[0], s[1], s[2], s[3], s[4]);   
-        con += `<circle cx='0' cy='0' r='${entities[i].r}vmin' fill='red' id='${entities[i].id}'/>`
+        con += `<circle cx='0' cy='0' r='${entities[i].r}vmin' fill='${s[5]}' id='${entities[i].id}'/>`
     }
     graphics.innerHTML = con;
 
@@ -156,7 +156,7 @@ function UpdateTrail(){
     for (let i = 0; i < entities.length; i++){
         let e = entities[i];
 
-        let p = `${50*vw + e.x*vmin},${50*vh - e.y*vmin}`;
+        let p = Point(e.x, e.y);
         e.trail.push(p);
 
         if (e.trail.length >= len_trail) e.trail.shift();
@@ -167,3 +167,14 @@ function UpdateTrail(){
 
     graphics.innerHTML = con + graphics.innerHTML;
 }
+
+function Point(x, y) {
+    x = 50*vw + x*vmin;
+    y = 50*vh - y*vmin;
+
+    return Math.round(x * 10) / 10 + "," + Math.round(y * 10) / 10;
+}
+
+window.addEventListener("resize", () => {
+    entities.forEach(e => e.trail = []);
+})

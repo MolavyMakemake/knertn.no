@@ -1,4 +1,20 @@
+body{background-color: #0a0802;}
 .graphics{
     width: 100vw;
     height: 100vh;
+}
+
+polyline{
+    stroke: white;
+}
+
+.sun{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width: 8vmin;
+    height: 8vmin;
+    border-radius: 50%;
+    background-color: #fff0a4;
+    box-shadow: 1px 1px 30px 5px rgb(247 208 117);
 }
