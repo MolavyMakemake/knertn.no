@@ -7,3 +7,15 @@ body{
     color: var(--text-black);
     margin: 0;
 }
+
+.footer{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.footer-content{
+    display: flex;
+    margin-left: 20px;
+    height: 120px;
+    align-items: center;
+}
