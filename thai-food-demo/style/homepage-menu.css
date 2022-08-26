@@ -1,9 +1,9 @@
 .menu{
     margin-top: 100px;
-    width: 80%;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    max-width: 1400px;
 }
 
 .menu-preview{
@@ -13,11 +13,11 @@
 }
 
 .menu-catagory{
-    width: 350px;
-    height: 350px;
-    margin: 10px;
+    width: 80vw;
+    height: 60vw;
     background-color: orange;
     cursor: pointer;
+    margin: 10px;
 }
 
 .menu-item-preview{
@@ -26,4 +26,41 @@
     margin: 10px;
     background-color: red;
     cursor: pointer;
+}
+
+.menu-opened{
+    width: 80vw;
+    height: 700px;
+    background-color: brown;
+    margin: 10px;
+    position: relative;
+}
+
+.cross{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url("../images/cross.png");
+    background-size: contain;
+    cursor: pointer;
+}
+
+.cross {}
+
+@media only screen and (min-width: 800px) {
+    .menu-catagory{
+        width: calc(50% - 20px);
+        height: 25vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .menu-catagory{
+        width: calc(26.66vw - 20px);
+        height: 20vw;
+        max-width: 446.666px;
+        max-height: 320px;
+    }
 }
