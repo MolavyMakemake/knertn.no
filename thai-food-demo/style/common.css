@@ -8,6 +8,24 @@ body{
     margin: 0;
 }
 
+.header{height: 100px;width: 100%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}
+
+.header-title{
+position: absolute;
+top: 20px; 
+right: 20px;  
+margin: 0;
+}
+
+.header > a{
+    font-size: 1.4em;
+    margin: 15px;
+}
+
+.header > a:hover{
+    text-decoration: underline;
+}
+
 .footer{
     margin-top: 100px;
     width: 100%;

@@ -1,15 +1,16 @@
 .menu{
-    margin-top: 100px;
+    margin-top: 150px;
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
     max-width: 1400px;
 }
 
-.menu-preview{
+.experience-preview{
     overflow: hidden;
-    width: 50%;
+    width: 45%;
     height: 640px;
+    justify-content: center;
 }
 
 .menu-catagory{
@@ -18,22 +19,55 @@
     background-color: orange;
     cursor: pointer;
     margin: 10px;
+    object-fit: cover;
 }
 
-.menu-item-preview{
+.menu-catagory:hover{
+    transform: scale(1.01);
+}
+
+.menu-catagory-title{
+    pointer-events: none;
+    background-color: #00000022;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-image{
     width: 300px;
     height: 300px;
     margin: 10px;
     background-color: red;
-    cursor: pointer;
+    object-fit: cover;
 }
 
 .menu-opened{
-    width: 80vw;
-    height: 700px;
-    background-color: brown;
+    width: 80vw !important;
+    height: 700px !important;
     margin: 10px;
+    background-position: center;
+    background-size: cover;
     position: relative;
+}
+
+.menu-opened > img{
+    
+position: absolute;
+    
+top: 0;
+    
+z-index: -1;
+    
+width: 100%;
+    
+height: 100%;
+    
+object-fit: cover;
+    
+-webkit-filter: opacity(0.5) blur(2px);
 }
 
 .cross{
@@ -45,14 +79,46 @@
     background-image: url("../images/cross.png");
     background-size: contain;
     cursor: pointer;
+    -webkit-filter: opacity(0.85);
 }
 
-.cross {}
+.cross:hover{
+    -webkit-filter: opacity(1);
+    transform: scale(1.01);
+}
+
+.catagory-info{
+
+height: 50%;
+
+display: flex;
+
+align-items: center;
+
+margin-right: 10%;
+
+margin-left: 10%;
+}
+.catagory-info > h1{
+    margin-right: 30%;
+}
+
+.catagory-items{
+    
+height: 45%;
+    
+margin-left: 5%;
+    
+width: 90%;
+    
+background-color: #87878788;
+}
 
 @media only screen and (min-width: 800px) {
     .menu-catagory{
         width: calc(50% - 20px);
         height: 25vw;
+        color: var(--text-white);
     }
 }
 
@@ -62,5 +128,8 @@
         height: 20vw;
         max-width: 446.666px;
         max-height: 320px;
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease;
     }
 }

@@ -11,47 +11,131 @@
     <link rel="stylesheet" href="style/homepage.css">
     <link rel="stylesheet" href="style/homepage-menu.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 
     <title>Thai catering</title>
 </head>
 <body>
-    
+    <!---->
+    <!--HEADER-->
     <div class="header">
-        <h2 class="text-center text-align-right">Navn på bedrift</h2>
+        <a href="./om-oss.html">Om oss</a>
+        <a href="./om-oss.html">Facebook</a>
+        <a href="./om-oss.html">Instagram</a>
+        <h2 class="header-title">PH Catering</h2>
     </div>
-    
-    <div class="banner">
-        <h1 class="text-center text-align-center">Navn på bedrift - raskt, enkelt og godt</h1>
-    </div>
+    <!---->
 
+    <!---->
+    <!--BANNER-->
+    <div class="banner text-center text-align-center">
+        <h1>Asiatisk catering</h1>
+        <h2>Selvfølgelig kan alle våre tjenester tilpasses til hjemmet</h2>
+    </div>
+    <!---->
+
+    <!---->
+    <!--CONTENT-->
     <div class="content">
-        <div class="intro">
-            <h2 class="text-align-center">
-                Lei hjem en kokk
-            </h2>
-            <h5 class="text-align-center">
-                Å leie hjem en kokk er et praktisk og rimelig alternativ til å gå på restaurant. 
-                Spesielt hvis du har en anledning med seks gjester eller mere
-            </h5>
-            <h5 class="text-align-center">
-                Du slipper å betale for drosje og ordne med barnevakt. 
-            </h5>
-            <h5 class="text-align-center">
-                Drikken kjøper du selv. 
-                I følge loven har vi ikke lov til å ta med oss ​​alkoholholdige drikkevarer og vi stoler fullt på det Vinmonopolet anbefaler.
-            </h5>
+        <!---->
+        <!---->
+        <!--INTRO SLIDER-->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide text-align-center">
+                <h2>
+                    Lei hjem en kokk
+                </h2>
+                <h6>
+                    Å leie hjem en kokk er et praktisk og rimelig alternativ til å gå på restaurant. 
+                    Spesielt hvis du har en anledning med seks gjester eller mere
+                </h6>
+                <h6>
+                    Du slipper å betale for drosje og ordne med barnevakt. 
+                </h6>
+                <h6>
+                    Drikken kjøper du selv. 
+                    I følge loven har vi ikke lov til å ta med oss ​​alkoholholdige drikkevarer og vi stoler fullt på det Vinmonopolet anbefaler.
+                </h6>
+            </div>
+
+            <div class="swiper-slide text-align-center">
+                <h2>
+                    Slik bestiller du en kokk hjemme
+                </h2>
+                <h6>
+                    Send en e-post til kesinee81@outlook.com. 
+                </h6>
+                <h6>
+                    Der oppgir du hvilken dato og klokkeslett du ønsker å spise, hvilken adresse vi skal velge en forrett, en hovedrett og en dessert.
+                    Vi ønsker den informasjonen minst en uke i forveien. 
+                    Hvis du har spørsmål, ikke nøl med å ta kontakt.
+                </h6>
+                <h6>
+                    *Prisene kan variere avhengig av by og om du endrer ingredienser i den eksisterende menyen. 
+                    Selv menyene kan variere litt fra by til by da vi setter pris på det som er tilgjengelig lokalt i området.
+                </h6>
+            </div>
+
+            <div class="swiper-slide text-align-center">
+                <h2>
+                    Lei en kokk til selskapet!
+                </h2>
+                <h6>
+                    Bursdager, bryllupsgaver, bursdagsgaver eller for eksempel studentmottakelser er typiske anledninger når folk velger å ansette en kokk. 
+                    Men det er selvsagt fullt mulig å leie inn en kokk til selskapet også.
+                </h6>
+                <h6>
+                    Enten som middag for en bedriftsgruppe eller som minglebuffet når du inviterer kunder og forretningspartnere.
+                </h6>
+                <h6>
+                    Vi driver også med aktiv matlaging på bedrifter
+                </h6>
+                <br>
+                <h6>
+                    Har du spørsmål?
+                    <br>
+                    E-postadresse kesinee81@outlook.com 
+                </h6>
+            </div>
+            ...
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
-        <div class="menu menu-preview">
-            <div class="menu-item-preview"></div>
-            <div class="menu-item-preview"></div>
-            <div class="menu-item-preview"></div>
-            <div class="menu-item-preview"></div>
+        <!---->
+        <!--IMAGES-->
+        <div class="menu experience-preview">
+            <img class="experience-image" src="images/experience-1.jpg"  title="title" >
+            <img class="experience-image" src="images/experience-2.jpg"  title="title" >
+            <img class="experience-image" src="images/experience-3.jpg"  title="title" >
+            <img class="experience-image" src="images/experience-4.jpeg" title="title" >
         </div>
+        <!---->
 
-        <div class="menu">
+        <!---->
+        <!--MENU-->
+        <div id="menu" class="menu">
             <div class="menu-opened">
+                <div class="catagory-info">
+                    <h1>Tam</h1>
+                    <h5>
+                        An ingredient found in many Thai dishes and used in every region of the country is nam pla, a clear fish sauce that is very aromatic. 
+                        Fish sauce is a staple ingredient in Thai cuisine.
+                    </h5>
+                </div>
+                <div class="catagory-items"></div>
                 <div class="cross"></div>
+                <img src="images/gluten-free.jpg">
             </div>
             <div class="menu-catagory"></div>
             <div class="menu-catagory"></div>
@@ -60,10 +144,10 @@
             <div class="menu-catagory"></div>
         </div>
     </div>
+    <!---->
 
-    <div class="static-header">
-
-    </div>
+    <!---->
+    <!--FOOTER-->
 
     <div class="footer">
         <hr>
@@ -79,6 +163,10 @@
     <div class="cookies-consent">
         
     </div>
+
+    <script src="scripts/swipe-slider.js"></script>
+    <script src="scripts/menu-data.js"></script>
+    <script src="scripts/menu-load.js"></script>
 
 </body>
 </html>

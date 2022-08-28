@@ -1,4 +1,0 @@
-const menu = 
-{
-    "test" : "test"
-}
