@@ -29,7 +29,7 @@ function opened_inner_HTML(i){
     <div class="catagory-items"></div>
 
     <img src="images/${catagory.image}">
-    <div class="cross"></div>
+    <div class="cross" onclick="close_opened_catagory()"></div>
     `;
 }
 

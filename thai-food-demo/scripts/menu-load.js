@@ -13,15 +13,19 @@ function create_menu(){
     menu.innerHTML = content;
 }
 
+function close_opened_catagory(){
+    opened_catagory.remove();
+    menu.insertBefore(closed_catagory, menu.children[closed_catagory_index]);
+
+    opened_catagory = null;
+}
 
 function expand_catagory(e){
     id = Number(e.target.id[1]);
     catagory = menu_catagories[id];
 
-    if (opened_catagory != null){
-        opened_catagory.remove();
-        menu.insertBefore(closed_catagory, menu.children[closed_catagory_index]);
-    }
+    if (opened_catagory != null)
+        close_opened_catagory();
 
     closed_catagory_index = id;
 
