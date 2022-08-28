@@ -19,7 +19,9 @@
     background-color: orange;
     cursor: pointer;
     margin: 10px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease;
 }
 
 .menu-catagory:hover{
@@ -128,8 +130,5 @@ background-color: #87878788;
         height: 20vw;
         max-width: 446.666px;
         max-height: 320px;
-        background-size: cover;
-        background-position: center;
-        transition: all .3s ease;
     }
 }
