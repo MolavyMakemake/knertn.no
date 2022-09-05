@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/checkout.css">
+    <link rel="stylesheet" href="style/text.css">
+    <link rel="stylesheet" href="style/common.css">
+</head>
+<body>
+    
+    <div class="header">
+        <a href="./om-oss.html">Om oss</a>
+        <a href="./om-oss.html">Facebook</a>
+        <a href="./om-oss.html">Instagram</a>
+        <a href="./checkout.html">Checkout</a>
+        <h2 class="header-title">PH Catering</h2>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <label for="order-name">Fulle navn:</label><br>
+            <input class="order-input" type="text" id="order-name" name="fname" placeholder="Navn"><br>
+    
+            <label for="order-details">Detaljer om din bestilling:</label><br>
+            <textarea class="order-input" id="order-details" cols="30" rows="4" placeholder="Detaljer"></textarea>
+        
+            <button id="order-button">Send mail</button>
+        </form>
+        <img src="./images/experience-1.jpg">
+    </div>
+
+    <script>
+        function send_mail(){
+            window.open("mailto:molavy.business@gmail.com?subject=subject&body=body")
+        }
+    </script>
+
+</body>
+</html>

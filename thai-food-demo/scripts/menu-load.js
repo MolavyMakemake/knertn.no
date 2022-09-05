@@ -41,7 +41,7 @@ function expand_catagory(e){
 }
 
 
-create_menu();
+//create_menu();
 document.querySelectorAll(".menu-catagory").forEach(e => {
     e.addEventListener("click", expand_catagory)
 })

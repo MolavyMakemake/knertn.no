@@ -1,6 +1,9 @@
 :root{
     --text-white: white;
     --text-black: black;
+
+    --background-color: white;
+    --foreground-color: whitesmoke;
 }
 
 body{
@@ -18,8 +21,10 @@ margin: 0;
 }
 
 .header > a{
-    font-size: 1.4em;
-    margin: 15px;
+    
+font-size: 1.4em;
+    
+margin: 15px;
 }
 
 .header > a:hover{
@@ -36,4 +41,28 @@ margin: 0;
     margin-left: 20px;
     height: 120px;
     align-items: center;
+}
+
+.pm-item-container{
+    font-weight: bold;
+    width: 110px;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--text-black);
+    text-align: center;
+    line-height: 180%;
+}
+
+.pm-item{
+width: 25px;
+background-color: white;
+user-select: none;
+cursor: pointer;
+height: 25px;
+}
+
+.num-item{
+width: 35px;
+height: 25px;
+background-color: white;
 }
