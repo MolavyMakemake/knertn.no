@@ -13,15 +13,10 @@ body{
 
 .header{height: 100px;width: 100%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}
 
-.header-title{
-position: absolute;
-top: 20px; 
-right: 20px;  
-margin: 0;
-}
+.header-title{position: absolute;top: 20px;right: 20px;margin: 0;cursor: pointer;}
 
 .header > a{
-    
+    visibility: hidden; 
 font-size: 1.4em;
     
 margin: 15px;
@@ -34,6 +29,7 @@ margin: 15px;
 .footer{
     margin-top: 100px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .footer-content{
@@ -41,28 +37,54 @@ margin: 15px;
     margin-left: 20px;
     height: 120px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .pm-item-container{
-    font-weight: bold;
-    width: 110px;
-    display: flex;
-    justify-content: space-evenly;
-    color: var(--text-black);
-    text-align: center;
-    line-height: 180%;
+    
+font-weight: bold;
+    
+width: 110px;
+    
+display: flex;
+    
+justify-content: space-evenly;
+    
+color: var(--text-black);
+    
+text-align: center;
+    
+line-height: 180%;
 }
 
 .pm-item{
-width: 25px;
-background-color: white;
-user-select: none;
-cursor: pointer;
-height: 25px;
+
+width: 25px;
+
+background-color: white;
+
+user-select: none;
+
+cursor: pointer;
+
+height: 25px;
 }
 
 .num-item{
-width: 35px;
-height: 25px;
-background-color: white;
+
+width: 35px;
+
+height: 25px;
+
+background-color: white;
+}
+
+@media only screen and (min-width: 800px){
+    .header > a{
+        visibility: visible;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+
 }

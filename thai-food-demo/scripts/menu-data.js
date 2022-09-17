@@ -16,18 +16,48 @@ const menu_catagories =
 ]
 
 
+items = JSON.parse(localStorage.getItem("items"));
+
+
+function item_HTML(item_key){
+    let item = menu_items[item_key]
+
+    let btn_html = items.includes(item_key) ?
+    `
+    <div class="menu-item-btn remove-item" id="${item_key}">
+        <h4>Fjern</h4>
+    </div>
+    ` : `
+    <div class="menu-item-btn add-item" id="${item_key}">
+        <h4>Legg til</h4>
+    </div>
+    `
+
+    return`
+    <div class="menu-item">
+        <div class="menu-item-side">
+            <h3>Dette er en thai rett</h3>
+            ${btn_html}
+        </div>
+        <img class="menu-item-img" src="images/gaeng.jpg">
+    </div>
+    `
+}
+
 function opened_inner_HTML(i){
     let catagory = menu_catagories[i];
+    let items_HTML = "";
+    catagory.items.forEach(item => items_HTML += item_HTML(item))
+
     return `
     <div class="catagory-info">
-        <h1>${catagory.name}</h1>
+        <h2>${catagory.name}</h2>
         <h5>
             An ingredient found in many Thai dishes and used in every region of the country is nam pla, a clear fish sauce that is very aromatic. 
             Fish sauce is a staple ingredient in Thai cuisine.
         </h5>
     </div>
-    <div class="catagory-items"></div>
-
+    <div class="catagory-items">${items_HTML}</div>
     <img src="images/${catagory.image}">
     <div class="cross" onclick="close_opened_catagory()"></div>
     `;

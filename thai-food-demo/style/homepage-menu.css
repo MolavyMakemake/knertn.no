@@ -6,13 +6,6 @@
     max-width: 1400px;
 }
 
-.experience-preview{
-    overflow: hidden;
-    width: 45%;
-    height: 640px;
-    justify-content: center;
-}
-
 .menu-catagory{
     width: 80vw;
     height: 60vw;
@@ -21,11 +14,11 @@
     margin: 10px;
     background-size: cover;
     background-position: center;
-    transition: all .3s ease;
+    transition: scale .3s ease;
 }
 
 .menu-catagory:hover{
-    transform: scale(1.01);
+    scale: 1.01;
 }
 
 .menu-catagory-title{
@@ -80,8 +73,8 @@ object-fit: cover;
 }
 
 .cross{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -109,7 +102,7 @@ margin-right: 10%;
 margin-left: 10%;
 }
 .catagory-info > h1{
-    margin-right: 30%;
+    margin-right: 20%;
 }
 
 .catagory-items{
@@ -127,11 +120,11 @@ display: flex;
 align-items: center;
     
 justify-content: space-evenly;
+    
+overflow: hidden;
 }
 
 .menu-item{
-    
-background-image: url("../images/tam.jpg");
     
 background-position: center;
     
@@ -145,7 +138,11 @@ height: 80%;
     
 display: flex;
     
+flex-direction: row-reverse;
+    
 justify-content: flex-end;
+    
+flex-grow: 0.2;
 }
 
 .menu-item-side{
@@ -161,19 +158,66 @@ display: flex;
 flex-direction: column;
     
 align-items: center;
+    
+justify-content: space-between;
 }
 .menu-item-btn{
-    height: 32px;
-    width: 86px;
-    user-select: none;
-    background-color: #439755;
-    cursor: pointer;
-    text-align: center;
-    line-height: 95%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+height: 32px;
+    
+width: 85px;
+    
+user-select: none;
+    
+cursor: pointer;
+    
+text-align: center;
+    
+line-height: 95%;
+    
+margin-bottom: 30px;
+    
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.add-item{
+    background-color: #439755;
+}
+.remove-item{
+    background-color: #e94848;
+}
+.menu-item-btn > h4{
+    pointer-events: none;
+}
+.menu-item-img{
+
+height: 100%;
+
+width: 250px;
+
+object-fit: cover;
+
+object-position: center;
+}
+.menu-item-lower{
+    
+display: flex;
+    
+flex-direction: column;
+    
+align-items: center;
+    
+height: 70px;
+    
+justify-content: space-between;
+    
+margin-bottom: 20px;
 }
 
+
 @media only screen and (min-width: 800px) {
+    .catagory-info > h1{
+        margin-right: 30%;
+    }
     .menu-catagory{
         width: calc(50% - 20px);
         height: 25vw;

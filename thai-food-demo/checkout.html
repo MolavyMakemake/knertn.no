@@ -17,7 +17,7 @@
         <a href="./om-oss.html">Facebook</a>
         <a href="./om-oss.html">Instagram</a>
         <a href="./checkout.html">Checkout</a>
-        <h2 class="header-title">PH Catering</h2>
+        <h2 class="header-title" onclick="window.location.href='index.html'">PH Catering</h2>
     </div>
 
     <div class="form-container">
@@ -27,12 +27,23 @@
     
             <label for="order-details">Detaljer om din bestilling:</label><br>
             <textarea class="order-input" id="order-details" cols="30" rows="4" placeholder="Detaljer"></textarea>
-        
-            <button id="order-button">Send mail</button>
+            <div class="order-list">
+                <div class="order">
+                    <p>Item 1</p>
+                    <p>500kr per p.</p>
+                    <div class="order-vars">
+                        <input class="order-amount" type="number" name="porsjoner" min="1" step="0.1" value="1">
+                        <div class="remove-order"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="order-button" onclick="send_mail()">Send mail</button>
         </form>
         <img src="./images/experience-1.jpg">
     </div>
 
+    <script src="./scripts/menu-data.js"></script>
+    <script src="./scripts/checkout.js"></script>
     <script>
         function send_mail(){
             window.open("mailto:molavy.business@gmail.com?subject=subject&body=body")
