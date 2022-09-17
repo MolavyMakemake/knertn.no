@@ -56,8 +56,10 @@ function pm_item(e){
 
     switch (e.target.innerHTML){
         case "+":
-            if (n < 15)
+            if (n < 15){
                 pm_counter.innerHTML = n + 1;
+            }
+                
             break;
 
         case "-":
@@ -78,6 +80,7 @@ function add_item(e){
     }
     else {
         items.push(item);
+        animate_order_btn();
         e.target.innerHTML = "<h4>Fjern</h4>";
         e.target.className = "menu-item-btn remove-item";
     }

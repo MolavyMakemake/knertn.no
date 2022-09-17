@@ -45,11 +45,12 @@ form{
     display: flex;
     flex-direction: column;
     background-color: var(--foreground-color);
-    width: 30%;
+    width: 100%;
     justify-content: space-around;
+    position: relative;
 }
 
-.form-container > img{height: 400px;}
+.form-container > img{max-width: 100%;width: 600px;object-fit: scale-down;}
 
 .order-list{
 
@@ -74,4 +75,12 @@ form{
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+}
+
+.order-return-btn{width: 30px;height: 30px;background-image: url("../images/return.png");background-position: center;background-size: contain;position: absolute;left: 10px;top: 10px;}
+
+@media only screen and (min-width: 800px) {
+    form{
+        width: 600px;
+    }
 }

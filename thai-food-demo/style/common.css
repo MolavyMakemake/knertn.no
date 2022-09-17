@@ -11,12 +11,18 @@ body{
     margin: 0;
 }
 
-.header{height: 100px;width: 100%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}
+.header{height: 100px;width: 100%;display: flex;align-items: center;flex-direction: row-reverse;}
 
-.header-title{position: absolute;top: 20px;right: 20px;margin: 0;cursor: pointer;}
+.header-title{cursor: pointer;margin-right: 30px;white-space: nowrap;}
 
-.header > a{
-    visibility: hidden; 
+.header-links{
+    visibility: hidden;
+    flex-grow: 1;
+    min-width: 50%;
+    max-width: 800px;
+}
+
+.header-links > a{
 font-size: 1.4em;
     
 margin: 15px;
@@ -25,6 +31,7 @@ margin: 15px;
 .header > a:hover{
     text-decoration: underline;
 }
+
 
 .footer{
     margin-top: 100px;
@@ -80,7 +87,7 @@ background-color: white;
 }
 
 @media only screen and (min-width: 800px){
-    .header > a{
+    .header-links{
         visibility: visible;
     }
 }
