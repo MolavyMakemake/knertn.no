@@ -24,6 +24,32 @@ function remove_item(e){
     e.path[2].remove();
 }
 
+function send_mail(){
+    form = document.querySelector("form");
+
+    m_subject = "Bestilling til "
+    date = form["date"].value;
+
+    fname = form["fname"].value;
+    pnum = form["pnum"].value;
+    details = form["details"].value;
+    if (!date || !fname || !pnum || !details)
+    {
+        alert("Plis fyll ut alle feltene")
+        return;
+    }
+
+    m_body = fname + "   " + pnum;
+    m_body += "\n" + details;
+    m_body += "\n" + items;
+
+    m_subject += date;
+
+    m_subject = encodeURIComponent(m_subject);
+    m_body = encodeURIComponent(m_body);
+    window.open(`mailto:kesinee81@outlook.com?subject=${m_subject}&body=${m_body}`)
+}
+
 document.querySelectorAll(".remove-order").forEach(e => {
     e.addEventListener("click", remove_item)
 })
