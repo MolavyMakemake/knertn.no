@@ -75,13 +75,13 @@ function add_item(e){
     
     if (items.includes(item)){
         items.splice(items.indexOf(item), 1)
-        e.target.innerHTML = "<h4>Legg til</h4>";
+        e.target.innerHTML = "Legg til";
         e.target.className = "menu-item-btn add-item";
     }
     else {
         items.push(item);
         animate_order_btn();
-        e.target.innerHTML = "<h4>Fjern</h4>";
+        e.target.innerHTML = "Fjern";
         e.target.className = "menu-item-btn remove-item";
     }
 

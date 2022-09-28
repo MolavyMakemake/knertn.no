@@ -25,18 +25,18 @@ function item_HTML(item_key){
     let btn_html = items.includes(item_key) ?
     `
     <div class="menu-item-btn remove-item" id="${item_key}">
-        <h4>Fjern</h4>
+        Fjern
     </div>
     ` : `
     <div class="menu-item-btn add-item" id="${item_key}">
-        <h4>Legg til</h4>
+        Legg til
     </div>
     `
 
     return`
     <div class="menu-item">
         <div class="menu-item-side">
-            <h3>Dette er en thai rett</h3>
+            Dette er en thai rett
             ${btn_html}
         </div>
         <img class="menu-item-img" src="images/gaeng.jpg">

@@ -20,13 +20,13 @@ body{
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     margin-left: 64px;
+    flex-wrap: wrap;
 }
 
 .header-links > a{font-size: 1.4em;margin: 15px;margin-top: 5px;margin-bottom: 0;}
 
-.header > a:hover{
+.header-links > a:hover{
     text-decoration: underline;
 }
 
@@ -96,7 +96,7 @@ background-color: white;
 @media only screen and (min-width: 800px){
     .header-links{
         visibility: visible!important;
-        margin-right: calc(1100px - 100%);
+        margin-right: max(calc(1050px - 100%), 25px);
     }
     
     .header-tab{
