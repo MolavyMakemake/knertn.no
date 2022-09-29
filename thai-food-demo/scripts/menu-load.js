@@ -45,28 +45,14 @@ function expand_catagory(e){
 
 create_menu();
 document.querySelectorAll(".menu-catagory").forEach(e => {
-    e.addEventListener("click", expand_catagory)
+    e.addEventListener("mousedown", expand_catagory)
 })
 
-function pm_item(e){
-    let pm_counter = e.path[1].querySelector(".num-item");
-    let n = parseInt(pm_counter.innerHTML);
+function update_order_counter(){
 
-    if (pm_counter === null) return;
-
-    switch (e.target.innerHTML){
-        case "+":
-            if (n < 15){
-                pm_counter.innerHTML = n + 1;
-            }
-                
-            break;
-
-        case "-":
-            if (n > 0)
-                pm_counter.innerHTML = n - 1;
-            break;
-    }
+    let e = document.querySelector(".order-counter")
+    e.parentElement.style.visibility = items.length == 0 ? "hidden" : "visible";
+    e.innerHTML = items.length;
 }
 
 
@@ -86,12 +72,12 @@ function add_item(e){
     }
 
     localStorage.setItem("items", JSON.stringify(items))
-    document.querySelector(".order-counter").innerHTML = items.length;
+    update_order_counter();
 }
 
 function update_event_listener(){
     document.querySelectorAll(".menu-item-btn").forEach(e => {
-        e.addEventListener("click", add_item);
+        e.addEventListener("mousedown", add_item);
     })
 }
 
