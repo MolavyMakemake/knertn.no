@@ -17,6 +17,8 @@ const menu_catagories =
 
 
 items = JSON.parse(localStorage.getItem("items"));
+if (items == null)
+    items = []
 
 
 function item_HTML(item_key){

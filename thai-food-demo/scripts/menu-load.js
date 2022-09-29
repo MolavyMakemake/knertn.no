@@ -81,4 +81,4 @@ function update_event_listener(){
     })
 }
 
-document.querySelector(".order-counter").innerHTML = items.length;
+update_order_counter();
