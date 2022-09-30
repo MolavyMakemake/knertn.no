@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1400px;
+    position: relative;
 }
 
 .menu-catagory{
@@ -42,7 +43,7 @@ justify-content: center;
 .experience-image{
     max-width: 300px;
     max-height: 300px;
-    width: 40vw;
+    min-width: 40vw;
     height: 40vw;
     margin: 10px;
     background-color: red;
