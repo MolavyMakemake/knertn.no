@@ -45,7 +45,6 @@ margin-top: 50px;
 .experience-preview{
     overflow: hidden;
     width: 100% !important;
-    height: 640px;
     justify-content: center;
 }
 
@@ -95,6 +94,7 @@ margin-top: 50px;
     }
     .experience-preview{
         width: 45% !important;
+        height: 640px;
     }
     .banner{
         height: 700px;
