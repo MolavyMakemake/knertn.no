@@ -1,18 +1,25 @@
 function order_HTML(item){
-    return `
-    <div class="order">
-        <p>${item}</p>
-        <p>500kr per p.</p>
-        <div class="order-vars">
-            <input class="order-amount" type="number" name="porsjoner" min="1" step="0.1" value="1">
-            <div class="remove-order" id="${item}"></div>
-        </div>
-    </div>
-    `
+    let out = "";
+    console.log(item);
+    item.types.forEach(type => {
+        out += `
+        <div class="order">
+            <p>${item}</p>
+            <p>500kr per p.</p>
+            <div class="order-vars">
+                <input class="order-amount" type="number" name="porsjoner" min="1" step="0.1" value="1">
+                <div class="remove-order" id="${item}"></div>
+            </div>
+        </div>`
+    });
+    return out;
 }
 
 let content = ""
-items.forEach(item => content += order_HTML(item))
+for (item in items)
+    if (items[item].in_cart)
+        content += order_HTML(items[item])
+
 document.querySelector(".order-list").innerHTML = content;
 
 

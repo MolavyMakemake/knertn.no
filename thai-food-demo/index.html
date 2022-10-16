@@ -125,10 +125,10 @@
         <!---->
         <!--IMAGES-->
         <div class="menu experience-preview">
-            <img class="experience-image" src="images/experience-1.jpg"  title="Title" >
-            <img class="experience-image" src="images/experience-2.jpg"  title="Title" >
-            <img class="experience-image" src="images/experience-3.jpg"  title="Title" >
-            <img class="experience-image" src="images/experience-4.jpeg" title="Title" >
+            <img class="experience-image" src="images/experience-1.jpg"  title="Title">
+            <img class="experience-image" src="images/experience-2.jpg"  title="Title">
+            <img class="experience-image" src="images/experience-3.jpg"  title="Title">
+            <img class="experience-image" src="images/experience-4.jpeg" title="Title">
         </div>
         <!---->
 
@@ -136,28 +136,43 @@
         <!--MENU-->
         <div id="menu" class="menu">
             <div class="menu-opened">
+                <img src="images/tam-1.jpg">
+                <div class="menu-item-img-cover"></div>
                 <div class="catagory-info">
-                    <h1>Tam</h1>
+                    <h3>${catagory.name}</h3>
                     <h5>
                         An ingredient found in many Thai dishes and used in every region of the country is nam pla, a clear fish sauce that is very aromatic. 
                         Fish sauce is a staple ingredient in Thai cuisine.
                     </h5>
                 </div>
                 <div class="catagory-items">
+                    <div class="menu-items">
+                        <div class="catagory-item-btn">A</div>
+                        <div class="catagory-item-btn">A</div>
+                        <div class="catagory-item-btn">A</div>
+                        <div class="catagory-item-btn">A</div>
+                        <div class="catagory-item-btn">A</div>
+                    </div>
                     <div class="menu-item">
-                        <div class="menu-item-side">
-                            <h3>Dette er en thai rett</h3>
-                            <div class="menu-item-btn">
-                                <h4>Interested</h4>
+                        <h3>${item_key}</h3>
+                        <h6>bla bla bla bla</h6>
+                        <div class="menu-item-subs">
+                            <div class="menu-item-sub">
+                                <h5>Kjøtt</h5>
+                                <div class="menu-item-btn add-item" id="${item_key}">
+                                    Legg til
+                                </div>
+                            </div>
+                            <div class="menu-item-sub">
+                                <h5>Kylling</h5>
+                                <div class="menu-item-btn add-item" id="${item_key}">
+                                    Legg til
+                                </div>
                             </div>
                         </div>
-                        <img class="menu-item-img" src="images/gaeng.jpg">
-                    </div>
-                    <div class="menu-item">
                     </div>
                 </div>
-                <div class="cross"></div>
-                <img src="images/gluten-free.jpg">
+                <div class="cross" onclick="close_opened_catagory()"></div>
             </div>
             <div class="menu-catagory"></div>
             <div class="menu-catagory"></div>

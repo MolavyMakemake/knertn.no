@@ -51,33 +51,51 @@ document.querySelectorAll(".menu-catagory").forEach(e => {
 function update_order_counter(){
 
     let e = document.querySelector(".order-counter")
+    let sum = 0;
+    for (item in items)
+        if (items[item].in_cart)
+            sum++;
+        
+
     e.parentElement.style.visibility = items.length == 0 ? "hidden" : "visible";
-    e.innerHTML = items.length;
+    e.innerHTML = sum;
 }
 
 
 function add_item(e){
-    let item = e.target.id;
-    
-    if (items.includes(item)){
-        items.splice(items.indexOf(item), 1)
+    let item = items[e.target.id];
+    let subs = e.path[1].querySelectorAll("input");
+
+    if (item.in_cart){
+        item.in_cart = false;
         e.target.innerHTML = "Legg til";
         e.target.className = "menu-item-btn add-item";
     }
     else {
-        items.push(item);
+        item.in_cart = true;
         animate_order_btn();
         e.target.innerHTML = "Fjern";
         e.target.className = "menu-item-btn remove-item";
+        let checked = false;
+        subs.forEach(sub => checked |= sub.checked);
+        if (!checked)
+            subs[0].checked = true;
     }
 
     localStorage.setItem("items", JSON.stringify(items))
     update_order_counter();
 }
 
+function update_types(e){
+
+}
+
 function update_event_listener(){
     document.querySelectorAll(".menu-item-btn").forEach(e => {
         e.addEventListener("mousedown", add_item);
+    })
+    document.querySelectorAll("checkbox").forEach(e => {
+        e.addEventListener("change", update_types);
     })
 }
 
