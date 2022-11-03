@@ -6,7 +6,7 @@ const menu_items =
     "Grønn Karri": { "types" : ["Kylling", "Reker"], "ingredients" : "Kokosmelk basilikum og bambus skudd" },
 
     "Tom Kha Gai" : { "types" : ["Kylling", "Reker"], "ingredients" : "Sitrongress, kokosmelk, lime, tomater og koreander" },
-    "Tom Yam Kong" : { "types" : [""], "ingredients" : "Sitrongress, lime blader, galangal, melk og koreander" },
+    "Tom Yam Kung" : { "types" : [""], "ingredients" : "Sitrongress, limeblader, galangal, melk og koreander" },
 
     "Salat" : { "types" : ["Biff", "Reker", "Svinekjøtt"], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk og koreander (Sterk om ønskelig)" },
     "Tofu Salat" : { "types" : [""], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk, koreander, peanøtter og tomater (Sterk om ønskelig)" },
@@ -32,12 +32,12 @@ const menu_items =
 
 const menu_catagories = 
 [
-    { "name" : "Karri", "image" : "tam.jpg", "items" : ["Rød Karri", "Gul Karri", "Phaneng", "Grønn Karri"] },
-    { "name" : "Supper", "image" : "tom.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kong"] },
-    { "name" : "Salater", "image" : "yam.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"] },
-    { "name" : "Wok", "image" : "gaeng.jpg", "items" : ["Klassisk", "Pepper", "Sterk", "Strimlet", "Wok Rød Karri", "Stekt ris"] },
-    { "name" : "Nudler", "image" : "gluten-free.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"] },
-    { "name" : "Grill", "image" : "kids-menu.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"] }
+    { "name" : "Karri", "image" : "curry.jpg", "items" : ["Rød Karri", "Gul Karri", "Phaneng", "Grønn Karri"] },
+    { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"] },
+    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"] },
+    { "name" : "Wok", "image" : "wok.jpg", "items" : ["Klassisk", "Pepper", "Sterk", "Strimlet", "Wok Rød Karri", "Stekt ris"] },
+    { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"] },
+    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"] }
 ]
 
 function retrieve_cookies(){
@@ -106,7 +106,7 @@ function opened_inner_HTML(i){
     catagory.items.forEach(item => items_HTML += `<div class="catagory-item-btn" onclick="change_item(this)">${item}</div>`)
 
     return `
-    <img src="images/tam-1.jpg">
+    <img src="images/${catagory.image}">
     <div class="menu-item-img-cover"></div>
     <div class="catagory-info">
         <h2>${catagory.name}</h2>
