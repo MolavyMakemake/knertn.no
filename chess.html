@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+
+    <link rel="stylesheet" href="chess/chess.css">
+</head>
+<body>
+    
+
+
+
+    <div class="content">
+        <div class="chessboard-wrapper">
+            <div class="chessboard"></div>
+        </div>
+    </div>
+    
+
+    <script src="chess/gamelogic.js"></script>
+    <script src="chess/movegenerator.js"></script>
+    <script src="chess/loader.js"></script>
+    <script src="chess/interactions.js"></script>
+    <script src="chess/move_piece.js"></script>
+
+    <script>
+        if (localStorage.getItem("new-visitor") == null) {
+            alert(`Russians are as of ${new Date()} banned from Chess 2.0 as part of the sanctions imposed on Russia.`)
+            localStorage.setItem("new-visitor", false);
+        }
+
+        initialize_game();
+    </script>
+
+</body>
+</html>
